@@ -1,0 +1,18 @@
+.main {
+  display: grid;
+  grid-template-columns: 150px 1fr 1fr;
+  grid-template-rows: 65px 1fr;
+  grid-template-areas:
+    "header header header"
+    "sidebar projectarea projectarea";
+  grid-gap: 0;
+  background: white;
+}
+
+@media (max-width: 800px) {
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "sidebar"
+    "projectarea";
+}
