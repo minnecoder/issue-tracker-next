@@ -1,0 +1,79 @@
+.main {
+  grid-area: header;
+  height: 65px;
+  background: #372952;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.left h3 {
+  padding: 0 2rem;
+  color: white;
+  font-size: 2rem;
+  @media (max-width: 800px) {
+    padding-top: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  margin-right: 6rem;
+}
+
+.right li {
+  padding: 0 1rem;
+  color: white;
+}
+.dropdown {
+}
+.dropbtn {
+  background: #128deb;
+  color: white;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdownContent {
+  background: #a0d1f7;
+  display: none;
+  position: absolute;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content button {
+  background: #a0d1f7;
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+/*  */
+/* const SearchBar = styled.div` */
+/* margin-left: 2rem; */
+/* display: inline-flex; */
+/* background: #128DEB; */
+/* overflow: hidden; */
+/* color: white; */
+/* input { */
+/* border-style:hidden; */
+/* background: #128DEB; */
+/* width: 15rem; */
+/* color: white; */
+/* } */
+/* input: focus { */
+/* outline: none; */
+/* } */
