@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import styled from "styled-components";
+import styles from "../styles/Home.module.css";
+import { NextPage } from "next";
 
-export default function Login() {
+const Home: NextPage = () => {
   let history = useRouter();
   const [state, setState] = useState({
     email: "",
@@ -55,11 +56,11 @@ export default function Login() {
     }
   }
   return (
-    <LoginWrapper>
-      <LoginForm onSubmit={handleSubmit}>
+    <div className={styles.wrapper}>
+      <form className={styles.loginForm} onSubmit={handleSubmit}>
         <h1>Issue Tracker</h1>
         <h4>{state.error}</h4>
-        <div className="inputGroup">
+        <div className={styles.inputGroup}>
           <label htmlFor="email">Email</label>
           <input
             name="email"
@@ -68,7 +69,7 @@ export default function Login() {
             onChange={handleChange}
           />
         </div>
-        <div className="inputGroup">
+        <div className={styles.inputGroup}>
           <label htmlFor="password">Password</label>
           <input
             name="password"
@@ -78,8 +79,8 @@ export default function Login() {
           />
         </div>
 
-        <input type="submit" value="Login" />
-        <div className="loginLinks">
+        <input className={styles.submitButton} type="submit" value="Login" />
+        <div className={styles.loginLinks}>
           <button
             onClick={() => {
               history.push("/register");
@@ -89,74 +90,9 @@ export default function Login() {
           </button>
           <button onClick={() => demoLogin()}>Login as a Demo User</button>
         </div>
-      </LoginForm>
-    </LoginWrapper>
+      </form>
+    </div>
   );
-}
+};
 
-const LoginWrapper = styled.div`
-  background: #128deb;
-  height: 100vh;
-  width: 100%;
-`;
-
-const LoginForm = styled.form`
-  position: absolute;
-  top: 10%;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  background: white;
-  width: 30rem;
-  padding: 2rem 0;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-
-  h1 {
-    text-align: center;
-    color: #0d62a4;
-    padding-bottom: 0.5rem;
-  }
-
-  h4 {
-    color: red;
-  }
-  .inputGroup {
-    display: flex;
-    flex-direction: column;
-    margin: 0.5rem 0;
-  }
-  label {
-    margin-left: 0.75rem;
-  }
-  input {
-    margin: 0.25rem 0.75rem;
-    padding: 0.5rem;
-    border-radius: 3px;
-    border: 1px solid black;
-  }
-  input[type="submit"] {
-    margin-top: 0.75rem;
-    background: #eb7012;
-    color: white;
-    border-radius: 3px;
-    border: none;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  }
-  .loginLinks {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem 0;
-  }
-  .loginLinks button {
-    background: #128deb;
-    margin: 0.5rem;
-    padding: 1rem;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  }
-`;
+export default Home;
