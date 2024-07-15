@@ -1,0 +1,52 @@
+.wrapper {
+  background: #128deb;
+  height: 100vh;
+  width: 100%;
+}
+
+.loginForm {
+  position: absolute;
+  top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 30rem;
+  padding: 2rem 0;
+  border-radius: 10px;
+}
+
+.title {
+  text-align: center;
+  color: #0d62a4;
+  padding-bottom: 0.5rem;
+}
+
+.formError {
+  color: red;
+}
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+}
+.formLabel {
+  margin-left: 0.75rem;
+}
+.formInput {
+  margin: 0.25rem 0.75rem;
+  padding: 0.5rem;
+  border-radius: 3px;
+  border: 1px solid black;
+}
+.submitButton {
+  margin-top: 0.75rem;
+  background: #eb7012;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
