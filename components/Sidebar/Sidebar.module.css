@@ -1,0 +1,32 @@
+.main {
+  grid-area: sidebar;
+  height: calc(100vh - 65px);
+  background: #372952;
+  border-right: solid 1px #ddd;
+}
+.main ul {
+  margin-left: 1rem;
+  height: 100%;
+}
+
+/* @media (max-width: 800px) {
+  height: 3rem;
+  width: 100%;
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  li {
+    padding: 1rem 0;
+  }
+} */
+
+.sideBarLink {
+  color: white;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  justify-content: space-between;
+}
